@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_package = "de.uniba.rz.io.rpc";
+option java_multiple_files = true;
+option java_outer_classname = "TicketManagement";
+
+option objc_class_prefix = "RTG";
+
+service TicketService{
+    rpc serverrequest(TicketRequest) returns (TicketResponse) {};
+}
+
+message TicketRequest {
+    string requestbyclient = 1;
+}
+
+message TicketResponse {
+    string responsebyserver = 1;
+}
